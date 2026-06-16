@@ -44,13 +44,13 @@ export default function PropertyDetailPage({ params }: PropertyPageProps) {
   );
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-  const handleContactSubmit = (e: React.FormEvent) => {
+ const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    loading(true);
+    setLoading(true); // <--- CORRIGÉ ICI (au lieu de loading(true))
     setTimeout(() => {
       setLoading(false);
       setSuccess(true);
-    }, 1200);
+    }, 1000); // Ou le temps défini pour ton timeout
   };
 
   return (
