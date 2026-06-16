@@ -9,8 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: {
+          DEFAULT: "#1F3A56",
+          foreground: "#FFFFFF",
+        },
+        accent: {
+          DEFAULT: "#4DB6AC",
+          foreground: "#1F3A56",
+        },
+        neutral: {
+          50: "#F8FAFC",
+          100: "#F1F5F9",
+          200: "#E2E8F0",
+          700: "#334155",
+          900: "#0F172A",
+        }
+      },
+      fontFamily: {
+        sans: ["var(--font-geist-sans)", "sans-serif"],
       },
     },
   },
